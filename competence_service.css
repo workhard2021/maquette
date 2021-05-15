@@ -1,0 +1,260 @@
+#experiences_article{
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     flex-wrap:wrap;
+     flex-direction:column;
+     width:100%;
+}
+#experiences{
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     flex-wrap:wrap;
+     flex-direction:column;
+     width:100%;
+}
+#experiences ul{
+      list-style:none;
+}
+
+#experiences h2{
+      font-size:2em;
+      letter-spacing:2px;
+}
+#experiences .item_commun{
+     position: relative;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     flex-wrap:wrap;
+     flex-direction:row;
+     flex-wrap: wrap;
+     width:100%;
+     padding:0px;
+     background-color: rgb(48, 45, 49);
+}
+#experiences .dot{
+      position:relative;
+      width:30em;
+      
+      margin:1em auto;
+      overflow:hidden; 
+}
+
+#experiences .dot:nth-child(2n+1){
+      border-top:2px solid rgb(236, 92, 48);
+      border-left:2px solid rgb(145, 145, 224);
+      border-top-left-radius:10px;
+}
+#experiences .dot:nth-child(2n){
+      border-bottom:2px solid rgb(129, 190, 247);
+      border-right:2px solid rgb(235, 228, 205);
+      border-bottom-right-radius:10px;
+}
+#experiences .item_commun .exp_famille{
+      list-style-type:none;
+      font-size:3em;
+      position:absolute;
+      top:50%;
+      left:50%;
+      color:white;
+      text-shadow:2px 2px 2px rgb(238, 231, 231);
+      transform:translate(-50%,-50%);
+      transition:all 0.5;
+      letter-spacing:2px; 
+}
+
+#experiences .dot > ul{
+      position:relative;
+      bottom:500px;
+      width:0%;
+      height:100%;
+      z-index:1;
+      transition:all 0.5s ease-in-out;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      flex-wrap:wrap;
+      flex-direction:column;
+      padding:0px;
+      opacity:0.7;     
+}
+
+#experiences .dot:hover ul {
+     bottom:0px;
+     background-color: aliceblue;
+     width:100%;
+     overflow: hidden;
+}
+#experiences .dot > ul> .exp_parent{
+      padding-left:1em;
+      margin:0px;
+      margin:0.3em;
+      font-size:1.2em;
+      transition:all 0.7s;
+      position:relative;
+      color: black;
+      text-shadow:1px 1px 1px rgb(247, 247, 247);
+}
+#experiences  .exp_child{
+      padding:0px;
+      position:relative;
+      left:-100px;
+      font-size:1em;
+      transition: all 0.9s;
+      
+}
+#experiences  .exp_child li{
+      font-size:1em;
+      letter-spacing:2px;
+      position:relative;
+      padding:0.3em;
+      text-shadow:1px 1px 1px rgb(252, 249, 249);
+}
+
+#experiences  .exp_child {
+     opacity:0;
+}
+#experiences .dot:hover  .exp_child{
+     left:5em;  
+}
+#experiences .select{
+     display:none;
+}
+
+.exp_child li{
+     width:50%;
+     position: relative;
+}
+
+#experiences .image_icone{
+     width:2.2em;
+     height:2.2em;
+     margin-left:0.5em;
+     filter:saturate(2);
+     object-fit:contain;
+     border-radius:5px;
+     box-shadow:1px 1px 1px black;
+
+}
+.exp_child  .info{
+      position:absolute;
+      top:0px;
+      left:4em;
+      opacity:0;
+      transition:all 0.8s;
+      background-color:rgb(32, 110, 110);
+      color:white;
+      padding:4px;
+      border-radius:10px;
+      text-shadow:1px 1px 1px black;
+}
+
+
+.exp_child li:hover  .info{
+      opacity:1;
+}
+.exp_parent .image{
+      width:2.5em;
+      height:2.5em;
+}
+
+/* service */
+
+#services{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      width:100%;
+      
+ }
+
+ #services h2{
+      font-size:2em;
+      letter-spacing:2px;
+ }
+ #services .service{
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     flex-direction:row;
+     flex-wrap: wrap;
+     width:100%; 
+    
+ }
+ 
+ #services .service .item h3{
+      text-shadow:1px 1px 1px black;
+      color:white;
+      text-shadow:1px 1px 1px rgb(233, 176, 176);
+      transition: all 0.5s;
+ }
+
+ #services .service .item{
+      width:30em;
+      height:18em;
+      border:1px solid black;
+      padding:0.5em;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      transition:all 0.5s ease;
+      background-color:black;
+      box-shadow: 11px 11px 3px black;
+      position:relative;
+      margin:1em auto;
+      left:-110%;
+ }
+ 
+ #services .service .item i{
+      font-size:5em;
+      color:rgb(238, 153, 153);
+      display:inline-block;
+      margin:auto;
+     transition:all 0.5s;
+ }
+ 
+ #services .service .item:hover i{
+     color:white;
+ }
+ #services .service .item:hover{
+      background-color: rgb(56, 54, 54);
+      color:white;
+ }
+ #services .service .item p{
+      transition:all 1s ease-in-out;
+      opacity:0;
+      color:white;
+ }
+ 
+ 
+
+
+ /* media query */
+@media screen and (max-width:765px) {
+      /* experience */
+     #experiences .dot{
+          width:18em;
+     }
+     /* servive */
+     #services .service .item h3{
+           font-size:1.3em;
+           white-space: nowrap;
+     }
+  
+     #services .service{
+          width:95%;
+     } 
+}
+
+
+
+
+
+
+
+
+
