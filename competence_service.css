@@ -69,6 +69,7 @@
       
 }
 
+
 #experiences .dot > ul{
       position:relative;
       bottom:500px;
@@ -78,11 +79,11 @@
       transition:all 0.5s ease-in-out;
       display:flex;
       justify-content:center;
-      align-items:flex-start;
+      align-items:center;
       flex-wrap:wrap;
-      flex-direction:column;
+      flex-direction:r;
       padding:0px;
-      opacity:0.7;  
+      opacity:0.7; 
 }
 
 #experiences .dot:hover ul {
@@ -92,44 +93,42 @@
      overflow: hidden;
 }
 #experiences .dot > ul> .exp_parent{
+      position:relative;
       padding-left:1em;
-      margin:0px;
       margin:0.3em;
       font-size:1.2em;
       transition:all 0.7s;
       position:relative;
-      color: black;
+      color:black;
+      width:8em;
+      height:5em;
+      z-index:99;
       text-shadow:1px 1px 1px rgb(247, 247, 247);
+      box-sizing:border-box;
 }
+
 #experiences  .exp_child{
       padding:0px;
       position:relative;
-      left:-100px;
       font-size:1em;
       transition: all 0.9s;
+      z-index:2;
       
 }
 #experiences  .exp_child li{
-      font-size:1em;
       letter-spacing:2px;
       position:relative;
-      padding:0.3em;
+      width:50%;
+      opacity:1;
+      margin:1.3em;
       text-shadow:1px 1px 1px rgb(252, 249, 249);
 }
 
-#experiences  .exp_child {
-     opacity:0;
-}
 #experiences .dot:hover  .exp_child{
      left:5em;  
 }
 #experiences .select{
      display:none;
-}
-
-.exp_child li{
-     width:50%;
-     position: relative;
 }
 
 #experiences .image_icone{
@@ -140,7 +139,6 @@
      object-fit:contain;
      border-radius:5px;
      box-shadow:1px 1px 1px black;
-
 }
 .exp_child  .info{
       position:absolute;
@@ -159,13 +157,24 @@
       opacity:1;
 }
 .exp_parent .image{
-      width:2.5em;
-      height:2.5em;
-      filter:saturate(1.2);
+      position:absolute;
+      width:100%;
+      height:100%;
+      left:0px;
+      filter:saturate(1.5);
       object-fit:contain;
       cursor:pointer;
       box-shadow:1px 1px 1px black;
       border-radius:2px;
+      opacity:1;
+     transition: all 0.5 ease;
+}
+.exp_parent .image:hover{
+      width:150%;
+      height:150%;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);  
 }
 
 /* service */
@@ -256,6 +265,10 @@
      #services .service{
           width:95%;
      } 
+     .exp_child li{
+     
+           width:100%;
+     }
 }
 
 
