@@ -95,6 +95,7 @@
 #experiences .dot > ul> .exp_parent{
       position:relative;
       padding-left:1em;
+      margin:0px;
       margin:0.3em;
       font-size:1.2em;
       transition:all 0.7s;
@@ -113,17 +114,20 @@
       font-size:1em;
       transition: all 0.9s;
       z-index:2;
+      opacity:1;
       
 }
 #experiences  .exp_child li{
       letter-spacing:2px;
       position:relative;
       width:50%;
-      opacity:1;
-      margin:1.3em;
+      margin:1.2em;
       text-shadow:1px 1px 1px rgb(252, 249, 249);
 }
 
+#experiences  .exp_child {
+     opacity:0;
+}
 #experiences .dot:hover  .exp_child{
      left:5em;  
 }
@@ -265,10 +269,6 @@
      #services .service{
           width:95%;
      } 
-     .exp_child li{
-     
-           width:100%;
-     }
 }
 
 
